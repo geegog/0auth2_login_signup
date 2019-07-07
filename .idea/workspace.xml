@@ -2,78 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="83d2b658-70bd-492f-b503-49c3909bfec4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/Role.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/AuthApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/AuthApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/dto/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/dto/ApiResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/dto/AuthResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/dto/AuthResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/dto/FacebookOAuth2UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/dto/FacebookOAuth2UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/dto/LoginRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/dto/LoginRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/dto/OAuth2UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/dto/OAuth2UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/dto/OAuth2UserInfoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/dto/OAuth2UserInfoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/dto/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/dto/SignUpRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/exception/BadRequestException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/exception/BadRequestException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/exception/OAuth2AuthenticationProcessingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/exception/OAuth2AuthenticationProcessingException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/exception/ResourceNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/service/CustomOAuth2UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/service/CustomOAuth2UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/service/MyUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/service/MyUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/application/service/TokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/service/TokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/domain/model/BaseEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/domain/model/BaseEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/domain/repository/HttpCookieOAuth2AuthorizationRequestRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/domain/repository/HttpCookieOAuth2AuthorizationRequestRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/config/SecurityConfigurator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/config/SecurityConfigurator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/config/WebMvcConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/config/WebMvcConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/ApplicationProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/ApplicationProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/CurrentUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/CurrentUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/OAuth2AuthenticationFailureHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/OAuth2AuthenticationFailureHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/OAuth2AuthenticationSuccessHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/OAuth2AuthenticationSuccessHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/RestAuthenticationEntryPoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/RestAuthenticationEntryPoint.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/TokenAuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/TokenAuthenticationFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/UserPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/UserPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/util/CookieUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/util/CookieUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/rest/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/common/rest/AuthenticationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/user/application/dto/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/application/dto/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/user/application/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/application/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/user/domain/model/AuthProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/AuthProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/user/domain/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/user/domain/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/user/rest/UserRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/rest/UserRestController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/dayappchallenge/auth/AuthApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/demo/auth/AuthApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/authentication.kotlin_module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/AuthApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/dto/ApiResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/dto/AuthResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/dto/FacebookOAuth2UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/dto/LoginRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/dto/OAuth2UserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/dto/OAuth2UserInfoFactory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/dto/SignUpRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/exception/BadRequestException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/exception/OAuth2AuthenticationProcessingException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/exception/ResourceNotFoundException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/service/CustomOAuth2UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/service/MyUserDetailsService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/application/service/TokenProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/domain/model/BaseEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/domain/repository/HttpCookieOAuth2AuthorizationRequestRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/config/SecurityConfigurator.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/config/WebMvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/security/ApplicationProperties$Auth.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/security/ApplicationProperties$OAuth2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/security/ApplicationProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/security/CurrentUser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/security/OAuth2AuthenticationFailureHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/security/OAuth2AuthenticationSuccessHandler.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/security/RestAuthenticationEntryPoint.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/security/TokenAuthenticationFilter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/security/UserPrincipal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/infrastructure/util/CookieUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/common/rest/AuthenticationController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/user/application/dto/UserDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/user/application/service/UserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/user/domain/model/AuthProvider.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/user/domain/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/user/domain/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/dayappchallenge/auth/user/rest/UserRestController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/dayappchallenge/auth/AuthApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/User.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -127,11 +59,47 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/OAuth2AuthenticationSuccessHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+            <state relative-caret-position="93">
+              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/Role.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/Permission.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="697">
+              <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -230,6 +198,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/dto/FacebookOAuth2UserInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/config/SecurityConfigurator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/OAuth2AuthenticationSuccessHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/Role.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/Permission.java" />
       </list>
     </option>
   </component>
@@ -256,7 +227,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="width" value="1920" />
     <option name="height" value="1080" />
   </component>
@@ -386,6 +357,27 @@
               <item name="0auth2_login_signup" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="authentication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="0auth2_login_signup" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="auth" type="462c0819:PsiDirectoryNode" />
+              <item name="user" type="462c0819:PsiDirectoryNode" />
+              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="authentication" type="b2602c69:ProjectViewProjectNode" />
+              <item name="0auth2_login_signup" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -472,12 +464,12 @@
       <workItem from="1562267116163" duration="1794000" />
       <workItem from="1562323257850" duration="10655000" />
       <workItem from="1562421412895" duration="10886000" />
-      <workItem from="1562488165180" duration="9631000" />
+      <workItem from="1562488165180" duration="10986000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37001000" />
+    <option name="totallyTimeSpent" value="38356000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -557,7 +549,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/user/application/service/UserAssembler.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/TokenAuthFilter.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/JwtConfig.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/dayappchallenge/auth/common/infrastructure/security/AppTokenConfig.java" />
@@ -881,16 +872,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/common/application/service/CustomOAuth2UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -943,8 +924,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/common/infrastructure/security/OAuth2AuthenticationSuccessHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="66" column="40" selection-start-line="66" selection-start-column="40" selection-end-line="66" selection-end-column="40" />
+        <state relative-caret-position="93">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/Role.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="25" column="38" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/demo/auth/user/domain/model/Permission.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
