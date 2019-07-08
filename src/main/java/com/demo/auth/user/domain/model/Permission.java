@@ -4,11 +4,13 @@ import com.demo.auth.common.domain.model.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
+import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
 import java.util.Collection;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
+@Entity
 public class Permission extends BaseEntity {
 
     private String name;

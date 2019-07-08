@@ -32,7 +32,7 @@ public class User extends BaseEntity {
 
     private String providerId;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinTable(
             name = "users_roles",
             joinColumns = @JoinColumn(
