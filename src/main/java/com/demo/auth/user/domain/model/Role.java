@@ -8,13 +8,15 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import java.util.Collection;
+import javax.validation.constraints.NotNull;
+import java.util.Set;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
 public class Role extends BaseEntity {
 
+    @NotNull
     private String name;
 
     @ManyToMany
@@ -24,6 +26,6 @@ public class Role extends BaseEntity {
                     name = "role_id", referencedColumnName = "id"),
             inverseJoinColumns = @JoinColumn(
                     name = "permission_id", referencedColumnName = "id"))
-    private Collection<Permission> permissions;
+    private Set<Permission> permissions;
 
 }

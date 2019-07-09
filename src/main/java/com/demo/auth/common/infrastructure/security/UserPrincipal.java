@@ -1,5 +1,7 @@
 package com.demo.auth.common.infrastructure.security;
 
+import com.demo.auth.user.domain.model.Permission;
+import com.demo.auth.user.domain.model.Role;
 import com.demo.auth.user.domain.model.User;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -29,6 +31,13 @@ public class UserPrincipal implements OAuth2User, UserDetails {
     public static UserPrincipal create(User user) {
         List<GrantedAuthority> authorities = Collections.
                 singletonList(new SimpleGrantedAuthority("ROLE_USER"));
+
+        for (Role role : user.getRoles()) {
+            authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getName()));
+            for (Permission permission : role.getPermissions()) {
+                authorities.add(new SimpleGrantedAuthority("PERMISSION_" + permission.getName()));
+            }
+        }
 
         return new UserPrincipal(
                 user.getId(),
