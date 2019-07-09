@@ -18,11 +18,17 @@ public class UserRestController {
     @Autowired
     private UserRepository userRepository;
 
-    @GetMapping("/user/me")
-    @PreAuthorize("hasRole('USER')")
+    @GetMapping("/me")
+    @PreAuthorize("hasRole('ROLE_USER')")
     public User getCurrentUser(@CurrentUser UserPrincipal userPrincipal) {
         return userRepository.findById(userPrincipal.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("User", "id", userPrincipal.getId()));
+    }
+
+    @GetMapping("/access")
+    @PreAuthorize("hasRole('ROLE_USER') and hasPermission('hasAccess','PERMISSION_READ')")
+    public String userAccess() {
+        return "You have USER role and READ access";
     }
 
 }

@@ -7,7 +7,11 @@ import com.demo.auth.common.application.dto.SignUpRequest;
 import com.demo.auth.common.application.exception.BadRequestException;
 import com.demo.auth.common.application.service.TokenProvider;
 import com.demo.auth.user.domain.model.AuthProvider;
+import com.demo.auth.user.domain.model.Permission;
+import com.demo.auth.user.domain.model.Role;
 import com.demo.auth.user.domain.model.User;
+import com.demo.auth.user.domain.repository.PermissionRepository;
+import com.demo.auth.user.domain.repository.RoleRepository;
 import com.demo.auth.user.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +25,8 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.HashSet;
+import java.util.Set;
 
 @RestController
 @RequestMapping("/auth")
@@ -37,6 +43,12 @@ public class AuthenticationController {
 
     @Autowired
     private TokenProvider tokenProvider;
+
+    @Autowired
+    private RoleRepository roleRepository;
+
+    @Autowired
+    private PermissionRepository permissionRepository;
 
     @PostMapping("/login")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) {
@@ -68,6 +80,25 @@ public class AuthenticationController {
         user.setProvider(AuthProvider.local);
 
         user.setPassword(passwordEncoder.encode(user.getPassword()));
+
+        Permission permission = new Permission();
+        permission.setName("READ");
+
+        Permission savedPermission = permissionRepository.save(permission);
+
+        Set permissions = new HashSet<>();
+        permissions.add(savedPermission);
+
+        Role role = new Role();
+        role.setName("USER");
+        role.setPermissions(permissions);
+
+        Role savedRole = roleRepository.save(role);
+
+        Set roles = new HashSet<>();
+        roles.add(savedRole);
+
+        user.setRoles(roles);
 
         User result = userRepository.save(user);
 
