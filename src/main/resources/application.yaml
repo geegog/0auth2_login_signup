@@ -1,8 +1,8 @@
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb?useSSL=false
-    username: sa
-    password:
+    url: jdbc:mysql://localhost:3306/spring_social?useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC&useSSL=false
+    username: root
+    password: ${DB_PASSWORD}
 
   jpa:
     show-sql: true
@@ -11,32 +11,32 @@ spring:
       naming-strategy: org.hibernate.cfg.ImprovedNamingStrategy
     properties:
       hibernate:
-        dialect: org.hibernate.dialect.H2Dialect
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
   security:
     oauth2:
       client:
         registration:
-#          google:
-#            clientId:
-#            clientSecret:
-#            redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
-#            scope:
-#              - email
-#              - profile
+          google:
+            clientId: 599956297395-ae9ukq4eti1q1urm9i074pbcfhv5h9kl.apps.googleusercontent.com
+            clientSecret: _2rbzwMojxmnf9as5aVPQsxZ
+            redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - email
+              - profile
           facebook:
-            clientId: 384380652198169
-            clientSecret: 7456b2f13e5dd68a02f7b0c229213889
+            clientId: 462513464536447
+            clientSecret: f2e94ed6aa2edf033cacc89a53a0fc10
             redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
             scope:
               - email
               - public_profile
-#          github:
-#            clientId:
-#            clientSecret:
-#            redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
-#            scope:
-#              - user:email
-#              - read:user
+          github:
+            clientId: Iv1.f6f8358857e6a877
+            clientSecret: 92b2312ecee50a750f3e22545a38a08318263189
+            redirectUriTemplate: "{baseUrl}/oauth2/callback/{registrationId}"
+            scope:
+              - user:email
+              - read:user
         provider:
           facebook:
             authorizationUri: https://www.facebook.com/v3.0/dialog/oauth
@@ -44,7 +44,7 @@ spring:
             userInfoUri: https://graph.facebook.com/v3.0/me?fields=id,first_name,middle_name,last_name,name,email,verified,is_verified,picture.width(250).height(250)
 app:
   auth:
-    tokenSecret: 926D96C90030DD58429D2751AC1BDBBC
+    tokenSecret: CE495833EFDE42B91B4F47EE1133E577C6989E75C2721FBBF296B831CF04F45434EBC14DBC73FFACA0B2881C0D9221F0EBA162D704494B9EEC401477172618CE
     tokenExpirationMsec: 864000000
   oauth2:
     # After successfully authenticating with the OAuth2 Provider,
