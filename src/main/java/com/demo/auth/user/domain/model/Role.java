@@ -3,10 +3,7 @@ package com.demo.auth.user.domain.model;
 import com.demo.auth.common.domain.model.BaseEntity;
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
@@ -19,7 +16,7 @@ public class Role extends BaseEntity {
     @NotNull
     private String name;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
             name = "roles_permissions",
             joinColumns = @JoinColumn(

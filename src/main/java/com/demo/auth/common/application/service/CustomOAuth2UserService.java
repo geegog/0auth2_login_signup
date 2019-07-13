@@ -5,7 +5,11 @@ import com.demo.auth.common.application.dto.OAuth2UserInfoFactory;
 import com.demo.auth.common.application.exception.OAuth2AuthenticationProcessingException;
 import com.demo.auth.common.infrastructure.security.UserPrincipal;
 import com.demo.auth.user.domain.model.AuthProvider;
+import com.demo.auth.user.domain.model.Permission;
+import com.demo.auth.user.domain.model.Role;
 import com.demo.auth.user.domain.model.User;
+import com.demo.auth.user.domain.repository.PermissionRepository;
+import com.demo.auth.user.domain.repository.RoleRepository;
 import com.demo.auth.user.domain.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.InternalAuthenticationServiceException;
@@ -17,13 +21,21 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+import java.util.HashSet;
 import java.util.Optional;
+import java.util.Set;
 
 @Service
 public class CustomOAuth2UserService extends DefaultOAuth2UserService {
 
     @Autowired
     private UserRepository userRepository;
+
+    @Autowired
+    private RoleRepository roleRepository;
+
+    @Autowired
+    private PermissionRepository permissionRepository;
 
     @Override
     public OAuth2User loadUser(OAuth2UserRequest oAuth2UserRequest) throws OAuth2AuthenticationException {
@@ -70,6 +82,26 @@ public class CustomOAuth2UserService extends DefaultOAuth2UserService {
         user.setName(oAuth2UserInfo.getName());
         user.setEmail(oAuth2UserInfo.getEmail());
         user.setImageUrl(oAuth2UserInfo.getImageUrl());
+
+        Permission permission = new Permission();
+        permission.setName("READ");
+
+        Permission savedPermission = permissionRepository.save(permission);
+
+        Set permissions = new HashSet<>();
+        permissions.add(savedPermission);
+
+        Role role = new Role();
+        role.setName("USER");
+        role.setPermissions(permissions);
+
+        Role savedRole = roleRepository.save(role);
+
+        Set roles = new HashSet<>();
+        roles.add(savedRole);
+
+        user.setRoles(roles);
+
         return userRepository.save(user);
     }
 
